@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monopoly Banka</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .player { margin: 20px; padding: 10px; border: 1px solid #000; display: inline-block; }
+        .buttons button { margin: 5px; padding: 10px; font-size: 18px; }
+        .input { font-size: 20px; width: 80px; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>Monopoly Banka</h1>
+
+    <div class="player" id="p1">
+        <h2>Oyuncu 1</h2>
+        <p>Bakiye: <span id="balance1">15000000</span></p>
+    </div>
+    <div class="player" id="p2">
+        <h2>Oyuncu 2</h2>
+        <p>Bakiye: <span id="balance2">15000000</span></p>
+    </div>
+    <div class="player" id="p3">
+        <h2>Oyuncu 3</h2>
+        <p>Bakiye: <span id="balance3">15000000</span></p>
+    </div>
+    <div class="player" id="p4">
+        <h2>Oyuncu 4</h2>
+        <p>Bakiye: <span id="balance4">15000000</span></p>
+    </div>
+
+    <h2>İşlem Yap</h2>
+    <div>
+        <label>Oyuncu Seç:</label>
+        <select id="playerSelect">
+            <option value="1">Oyuncu 1</option>
+            <option value="2">Oyuncu 2</option>
+            <option value="3">Oyuncu 3</option>
+            <option value="4">Oyuncu 4</option>
+        </select>
+    </div>
+
+    <div class="buttons">
+        <button onclick="addNumber(1)">1</button>
+        <button onclick="addNumber(2)">2</button>
+        <button onclick="addNumber(3)">3</button>
+        <button onclick="addNumber(4)">4</button>
+        <button onclick="addNumber(5)">5</button>
+        <button onclick="addNumber(6)">6</button>
+        <button onclick="addNumber(7)">7</button>
+        <button onclick="addNumber(8)">8</button>
+        <button onclick="addNumber(9)">9</button>
+    </div>
+
+    <div class="buttons">
+        <button onclick="setMultiplier(1000)">K (×1000)</button>
+        <button onclick="setMultiplier(1000000)">M (×1.000.000)</button>
+    </div>
+
+    <div>
+        <input id="amountInput" class="input" type="text" value="0" disabled>
+    </div>
+
+    <div class="buttons">
+        <button onclick="updateBalance('+')">+</button>
+        <button onclick="updateBalance('-')">-</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
